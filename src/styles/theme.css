@@ -1,0 +1,36 @@
+
+@theme {
+
+  /* Colors */
+  --color-primary: #ff6b00;
+  --color-secondary: #1f2937;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-title-black: #1a1a1a;
+  --color-blue-gray: #466378;
+
+  /* Fonts */
+  --font-inter: "Inter", sans-serif;
+
+  /* Container */
+  --container: 1280px;
+
+  /* Breakpoints */
+  --breakpoint-xs: 480px;
+  --breakpoint-xs-sm: 540px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-md-lg: 900px;
+  --breakpoint-ipad: 1024px;
+  --breakpoint-laptop: 1200px;
+  --breakpoint-lg: 1280px;
+  --breakpoint-xl: 1536px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px rgba(0,0,0,.08);
+}

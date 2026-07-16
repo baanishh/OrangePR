@@ -1,0 +1,11 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  @apply font-inter;
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
