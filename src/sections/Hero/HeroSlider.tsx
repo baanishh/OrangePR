@@ -3,9 +3,9 @@ import FeatherIcon from "../../components/common/FeatherIcon";
 import { slidesData as slides } from "../../data/hero";
 
 const titleStyles = [
-  "text-3xl xs:text-4xl xs-sm:text-6xl md:text-8xl laptop:text-[128px] font-inter-300 font-light",
-  "text-3xl xs:text-4xl xs-sm:text-6xl md:text-8xl laptop:text-[128px] font-inter-600 font-medium laptop:-mt-6 laptop:-ml-10 md:-mt-3 md:-ml-4 -mt-1.5 -ml-0",
-  "text-4xl xs:text-5xl xs-sm:text-7xl md:text-9xl laptop:text-[128px] font-inter-900 font-black laptop:-mt-4 md:-mt-2 -mt-1",
+  "text-3xl xs:text-4xl xs-sm:text-5xl md:text-6xl md-lg:text-7xl laptop:text-[128px] font-inter-300 font-light",
+  "text-3xl xs:text-4xl xs-sm:text-5xl md:text-6xl md-lg:text-7xl laptop:text-[128px] font-inter-600 font-medium laptop:-mt-6 laptop:-ml-10 md:-mt-3 md:-ml-4 -mt-1.5 -ml-0",
+  "text-4xl xs:text-5xl xs-sm:text-6xl md:text-7xl md-lg:text-8xl laptop:text-[128px] font-inter-900 font-black laptop:-mt-4 md:-mt-2 -mt-1",
 ];
 
 const extendedSlides = [slides[slides.length - 1], ...slides, slides[0]];
@@ -143,7 +143,7 @@ export default function HeroCarousel() {
                 width: `${100 / extendedSlides.length}%`,
               }}
             >
-              <div className="relative w-full max-w-[1536px] mx-auto px-4 xs:px-6 xs-sm:px-8 md-lg:px-12 pt-25 xs:pt-30 md:pt-45 pb-15 xs:pb-20 flex-1 flex flex-col justify-center z-10 h-full">
+              <div className="relative w-full max-w-[1536px] mx-auto px-4 xs:px-6 xs-sm:px-8 md-lg:px-12 pt-20 xs:pt-24 md:pt-28 laptop:pt-45 pb-20 xs:pb-24 md:pb-28 laptop:pb-20 flex-1 flex flex-col justify-center z-10 h-full">
                 <div className="grid grid-cols-1 laptop:grid-cols-2 items-center gap-8">
                   <div
                     className={`w-full laptop:pl-14 pl-0 text-center laptop:text-left relative z-20 transition-all duration-1000 delay-200 ${
@@ -166,7 +166,7 @@ export default function HeroCarousel() {
 
                     <a
                       href="#services"
-                      className="font-inter-600 mt-4 xs:mt-6 md:mt-10 h-[48px] xs:h-[58px] w-[150px] xs:w-[189px] rounded-[5px] bg-white text-gray-900 text-sm xs:text-base tracking-wide hover:bg-gray-100 transition-colors mx-auto laptop:mx-0 flex items-center justify-center cursor-pointer"
+                      className="font-inter-600 mt-4 xs:mt-6 md:mt-10 mb-8 laptop:mb-0 h-[48px] xs:h-[58px] w-[150px] xs:w-[189px] rounded-[5px] bg-white text-gray-900 text-sm xs:text-base tracking-wide hover:bg-gray-100 transition-colors mx-auto laptop:mx-0 flex items-center justify-center cursor-pointer"
                     >
                       EXPLORE
                     </a>
