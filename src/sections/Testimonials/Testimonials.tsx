@@ -40,6 +40,8 @@ const Testimonials = () => {
                   <img
                     src={slot.image}
                     alt=""
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover"
                   />
                 )}
@@ -72,6 +74,8 @@ const Testimonials = () => {
                 <img
                   src={t.avatar}
                   alt={t.name}
+                  loading="lazy"
+                  decoding="async"
                   className="h-24 w-24 md:h-28 md:w-28 rounded-full object-cover"
                 />
 

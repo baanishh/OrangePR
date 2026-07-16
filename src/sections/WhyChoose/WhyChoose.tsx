@@ -28,6 +28,8 @@ const WhyChoose = () => {
                 <img
                   src={reason.image}
                   alt={reason.title.join(" ")}
+                  loading="lazy"
+                  decoding="async"
                   className="h-24 w-24 md:w-[147px] md:h-[147px] object-cover shrink-0"
                 />
               </div>

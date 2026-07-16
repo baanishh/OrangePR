@@ -38,6 +38,8 @@ const About = () => {
               <img
                 src={promoteImg}
                 alt="Orange PR team member"
+                loading="eager"
+                decoding="async"
                 className="w-full h-[320px] sm:h-[468px] md-lg:h-[468px] object-cover transition-transform duration-500 group-hover:scale-103"
               />
             </div>

@@ -177,6 +177,9 @@ export default function HeroCarousel() {
                   <img
                     src={s.heroImage}
                     alt=""
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[98%] max-w-none object-contain transition-all duration-1000 delay-300 ${
                       isActive
                         ? "opacity-100 scale-100 translate-y-0"
@@ -196,6 +199,8 @@ export default function HeroCarousel() {
                     <img
                       src={s.videoThumbnail}
                       alt=""
+                      loading="eager"
+                      decoding="async"
                       className="w-full h-full object-cover rounded-md"
                     />
                     <button
@@ -222,8 +227,9 @@ export default function HeroCarousel() {
 
       <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-b from-transparent to-white/70 pointer-events-none z-10" />
 
-      <div className="absolute right-4 sm:right-8 md-lg:right-12 bottom-12 w-[340px] xl:w-[425px] hidden laptop:flex justify-end z-20">
-        <div className="flex items-center gap-4 rounded-full px-6 py-2 border border-white bg-transparent">
+      {/* Desktop controls — same max-w/px as inner content div so pill right-edge aligns with video card */}
+      <div className="absolute left-0 right-0 bottom-12 mx-auto z-20 hidden laptop:flex w-full max-w-[1536px] px-4 xs:px-6 xs-sm:px-8 md-lg:px-12 justify-end pointer-events-none">
+        <div className="pointer-events-auto flex items-center gap-4 rounded-full px-6 py-2 border border-white bg-transparent">
           <button
             onClick={prev}
             aria-label="Previous slide"

@@ -36,6 +36,8 @@ const ServiceCard = ({
       <img
         src={image}
         alt={title.join(" ")}
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover"
       />
 

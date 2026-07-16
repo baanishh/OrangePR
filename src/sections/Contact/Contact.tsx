@@ -47,6 +47,8 @@ const Contact = () => {
           <img
             src={contactImg}
             alt="Contact"
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover"
           />
         </div>
