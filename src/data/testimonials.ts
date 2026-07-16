@@ -1,16 +1,16 @@
 import { type Testimonial, type TestimonialColumn } from "../types/testimonial";
-import p1 from "../assets/images/testimonial/testimonial-img-1.svg";
-import p2 from "../assets/images/testimonial/testimonial-img-2.svg";
-import p3 from "../assets/images/testimonial/testimonial-img-3.svg";
-import p4 from "../assets/images/testimonial/testimonial-img-4.svg";
-import p5 from "../assets/images/testimonial/testimonial-img-5.svg";
-import p6 from "../assets/images/testimonial/testimonial-img-6.svg";
-import p7 from "../assets/images/testimonial/testimonial-img-7.svg";
-import p8 from "../assets/images/testimonial/testimonial-img-8.svg";
-import p9 from "../assets/images/testimonial/testimonial-img-9.svg";
-import p10 from "../assets/images/testimonial/testimonial-img-10.svg";
-import p11 from "../assets/images/testimonial/testimonial-img-11.svg";
-import p12 from "../assets/images/testimonial/testimonial-img-12.svg";
+import p1 from "../assets/images/testimonial/testimonial-img-1.webp";
+import p2 from "../assets/images/testimonial/testimonial-img-2.webp";
+import p3 from "../assets/images/testimonial/testimonial-img-3.webp";
+import p4 from "../assets/images/testimonial/testimonial-img-4.webp";
+import p5 from "../assets/images/testimonial/testimonial-img-5.webp";
+import p6 from "../assets/images/testimonial/testimonial-img-6.webp";
+import p7 from "../assets/images/testimonial/testimonial-img-7.webp";
+import p8 from "../assets/images/testimonial/testimonial-img-8.webp";
+import p9 from "../assets/images/testimonial/testimonial-img-9.webp";
+import p10 from "../assets/images/testimonial/testimonial-img-10.webp";
+import p11 from "../assets/images/testimonial/testimonial-img-11.webp";
+import p12 from "../assets/images/testimonial/testimonial-img-12.webp";
 
 export const testimonialsData: Testimonial[] = [
   {

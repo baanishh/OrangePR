@@ -1,5 +1,5 @@
 import { useState } from "react";
-import contactImg from "../../assets/images/contact/contact-img-1.svg";
+import contactImg from "../../assets/images/contact/contact-img-1.webp";
 import Input from "../../components/common/Input";
 import FadeIn from "../../components/common/FadeIn";
 

@@ -1,7 +1,7 @@
 import { type Service } from "../types/service";
-import mediaImg from "../assets/images/services/service-img-1.svg";
-import influencerImg from "../assets/images/services/service-img-2.svg";
-import eventsImg from "../assets/images/services/service-img-3.svg";
+import mediaImg from "../assets/images/services/service-img-1.webp";
+import influencerImg from "../assets/images/services/service-img-2.webp";
+import eventsImg from "../assets/images/services/service-img-3.webp";
 
 export const servicesData: Service[] = [
   {

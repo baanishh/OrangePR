@@ -1,9 +1,9 @@
 import { type Slide } from "../types/hero";
-import heroBg1 from "../assets/images/hero/hero-bg-1.svg";
-import heroBg2 from "../assets/images/hero/hero-bg-2.png";
-import heroBg3 from "../assets/images/hero/hero-bg-3.jpeg";
-import heroLadyBg from "../assets/images/hero/hero-lady.svg";
-import thumbnail from "../assets/images/hero/thumbnail-1.png";
+import heroBg1 from "../assets/images/hero/hero-bg-1.webp";
+import heroBg2 from "../assets/images/hero/hero-bg-2.webp";
+import heroBg3 from "../assets/images/hero/hero-bg-3.webp";
+import heroLadyBg from "../assets/images/hero/hero-lady.webp";
+import thumbnail from "../assets/images/hero/thumbnail-1.webp";
 
 export const slidesData: Slide[] = [
   {

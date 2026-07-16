@@ -13,3 +13,25 @@ body {
 
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* Global custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff6b00;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e05e00;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6b00 transparent;
+}

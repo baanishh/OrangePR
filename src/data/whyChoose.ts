@@ -1,7 +1,7 @@
 import { type Reason } from "../types/whyChoose";
-import whyImg1 from "../assets/images/why-choose/why-img-1.svg";
-import whyImg2 from "../assets/images/why-choose/why-img-2.svg";
-import whyImg3 from "../assets/images/why-choose/why-img-3.svg";
+import whyImg1 from "../assets/images/why-choose/why-img-1.webp";
+import whyImg2 from "../assets/images/why-choose/why-img-2.webp";
+import whyImg3 from "../assets/images/why-choose/why-img-3.webp";
 
 export const whyChooseData: Reason[] = [
   {
