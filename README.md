@@ -4,7 +4,7 @@ A modern, responsive landing page built for **Orange PR**, a Dubai-based communi
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 
 ```text
 src/
@@ -32,7 +32,7 @@ src/
 
 ---
 
-# ✨ Features
+# Features
 
 ### Hero Section
 
@@ -118,7 +118,7 @@ This improves loading speed and reduces unnecessary network requests.
 
 ---
 
-# 🚀 Getting Started
+# Getting Started
 
 Install dependencies:
 
@@ -146,7 +146,7 @@ npm run preview
 
 ---
 
-# 📌 Highlights
+# Highlights
 
 - Pixel-perfect implementation from the provided design
 - Fully responsive across desktop, tablet, and mobile
