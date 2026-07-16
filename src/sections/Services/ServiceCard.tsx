@@ -1,4 +1,3 @@
-// ServiceCard.tsx
 import FeatherIcon from "../../components/common/FeatherIcon";
 
 type ServiceCardProps = {
@@ -20,8 +19,8 @@ const ServiceCard = ({
 }: ServiceCardProps) => {
   const heightClasses = [
     "h-[300px] xs-sm:h-[380px] md:h-[460px] laptop:h-[763px]",
-    "h-[260px] xs-sm:h-[330px] md:h-[400px] laptop:h-[671px]",
-    "h-[220px] xs-sm:h-[280px] md:h-[340px] laptop:h-[580px]",
+    "h-[300px] xs-sm:h-[380px] md:h-[460px] laptop:h-[671px]",
+    "h-[300px] xs-sm:h-[380px] md:h-[460px] laptop:h-[580px]",
   ];
   const cardHeight = heightClasses[index] || heightClasses[0];
 

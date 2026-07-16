@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from "../../components/common/Input";
+import FadeIn from "../../components/common/FadeIn";
 
 const NewsLetter = () => {
   const [email, setEmail] = useState("");
@@ -12,7 +13,7 @@ const NewsLetter = () => {
 
   return (
     <section className="w-full bg-black py-12 md:pt-20 md:pb-10 border-b border-[#474747] text-white">
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+      <FadeIn className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
         {/* Left Content */}
         <div className="max-w-xl">
           <h2 className="text-[36px] md:text-[64px] font-inter-600 uppercase tracking-wide mb-4 leading-tight">
@@ -55,7 +56,7 @@ const NewsLetter = () => {
             </button>
           </div>
         </form>
-      </div>
+      </FadeIn>
     </section>
   );
 };

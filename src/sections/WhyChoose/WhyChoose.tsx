@@ -1,50 +1,10 @@
-import whyImg1 from "../../assets/images/why-choose/why-img-1.svg";
-import whyImg2 from "../../assets/images/why-choose/why-img-2.svg";
-import whyImg3 from "../../assets/images/why-choose/why-img-3.svg";
-
-type Reason = {
-  number: string;
-  title: string[];
-  description: string;
-  image: string;
-  bg: string;
-  offsetY: boolean;
-};
-
-const reasons: Reason[] = [
-  {
-    number: "01",
-    title: ["MARKET ENTRY", "EXPERTISE"],
-    description:
-      "We provide end-to-end PR and digital marketing solutions for businesses entering India.",
-    image: whyImg1,
-    bg: "bg-[#AEB4B9]",
-    offsetY: false,
-  },
-  {
-    number: "02",
-    title: ["STRONG MEDIA", "RELATIONSHIPS"],
-    description:
-      "Our network spans top Indian publications, ensuring maximum visibility for your brand.",
-    image: whyImg2,
-    bg: "bg-[#FD9073]",
-    offsetY: true,
-  },
-  {
-    number: "03",
-    title: ["LOCALIZED", "STORYTELLING"],
-    description:
-      "We tailor messaging to resonate with Indian consumers, investors, and stakeholders.",
-    image: whyImg3,
-    bg: "bg-[#FBB78C]",
-    offsetY: false,
-  },
-];
+import { whyChooseData as reasons } from "../../data/whyChoose";
+import FadeIn from "../../components/common/FadeIn";
 
 const WhyChoose = () => {
   return (
     <section className="bg-[#EFEFEF] laptop:bg-white py-12 laptop:py-20 relative overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-6 xs-sm:px-8 md-lg:px-12 relative isolate">
+      <FadeIn className="max-w-[1600px] mx-auto px-6 xs-sm:px-8 md-lg:px-12 relative isolate">
         {/* Gray background box that ends halfway through the cards (bottom aligns with bottom of card images) */}
         <div className="absolute top-0 left-6 right-6 xs-sm:left-8 xs-sm:right-8 md-lg:left-12 md-lg:right-12 h-[300px] laptop:h-[540px] bg-[#EFEFEF] border border-gray-200 rounded-t-md -z-10 hidden laptop:block" />
 
@@ -88,7 +48,7 @@ const WhyChoose = () => {
             </div>
           ))}
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 };

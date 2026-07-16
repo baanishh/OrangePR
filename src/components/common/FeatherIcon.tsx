@@ -1,8 +1,19 @@
-"use client";
-
-import { type CSSProperties, useEffect, useState } from "react";
+import { type CSSProperties } from "react";
 import * as feather from "feather-icons";
-import { generateRandomString } from "../../lib/utils";
+
+type FeatherIconProps = {
+  icon: string | feather.FeatherIconNames;
+  fIconColor?: string;
+  iconFillColor?: string;
+  iconStrokeColor?: string;
+  iconStrokeWidth?: number;
+  iconWidth?: number;
+  iconHeight?: number;
+  iconStyle?: string;
+  className?: string;
+  parentClass?: string;
+  parentStyles?: CSSProperties;
+};
 
 const FeatherIcon = ({
   icon = "",
@@ -16,30 +27,7 @@ const FeatherIcon = ({
   className = "",
   parentClass = "",
   parentStyles = {},
-}: {
-  icon: string | feather.FeatherIconNames;
-  fIconColor?: string | undefined;
-  iconFillColor?: string | undefined;
-  iconStrokeColor?: string | undefined;
-  iconStrokeWidth?: number | undefined;
-  iconWidth?: number | undefined;
-  iconHeight?: number | undefined;
-  iconStyle?: string | undefined;
-  className?: string | undefined;
-  parentClass?: string | undefined;
-  parentStyles?: CSSProperties;
-}) => {
-  const [client, setClient] = useState(false);
-  const [randomId, setRandomId] = useState("");
-
-  useEffect(() => {
-    setClient(true);
-  }, []);
-
-  useEffect(() => {
-    setRandomId(generateRandomString());
-  }, [client]);
-
+}: FeatherIconProps) => {
   switch (icon) {
     case "menu-dots":
       return (
@@ -54,9 +42,9 @@ const FeatherIcon = ({
             <path
               d="M27.506 17.75a1.217 1.217 0 1 0 1.721-1.722 1.217 1.217 0 0 0-1.721 1.721m5.74 5.74a1.22 1.22 0 0 0 1.985-.396 1.217 1.217 0 1 0-1.986.395m-11.48-11.48a1.216 1.216 0 1 0 1.72-1.72 1.216 1.216 0 0 0-1.72 1.72m0 11.478a1.218 1.218 0 1 0 1.722-1.722 1.218 1.218 0 0 0-1.721 1.722m5.74 5.74a1.218 1.218 0 1 0 1.722-1.722 1.218 1.218 0 0 0-1.722 1.722m-11.48-11.48a1.217 1.217 0 1 0 1.722-1.721 1.217 1.217 0 0 0-1.721 1.721m.002 11.479a1.218 1.218 0 1 0 1.722-1.722 1.218 1.218 0 0 0-1.722 1.722m5.74 5.74a1.217 1.217 0 1 0 1.721-1.722 1.217 1.217 0 0 0-1.721 1.722m-11.48-11.48a1.217 1.217 0 1 0 1.721-1.722 1.217 1.217 0 0 0-1.721 1.722"
               stroke="#fff"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </div>
@@ -73,8 +61,8 @@ const FeatherIcon = ({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M22 4a7 7 0 0 1 .384 13.99L22 18a7 7 0 0 1-.384-13.99zM8 38a2 2 0 0 0 2 2h12.733c1.276 0 2.103-1.409 1.746-2.634-.227-.776-.906-1.366-1.715-1.366H14a2 2 0 0 1-2-2v-1.2l.01-.388C12.203 28.815 15.06 26 18.5 26h7l.366.01c.65.039 1.307-.165 1.774-.619l.055-.052c1.08-1.037 1.034-2.934-.441-3.189Q26.398 22 25.5 22h-7l-.433.009C12.47 22.242 8 26.984 8 32.8zm11-27a3 3 0 1 1 6 0 3 3 0 0 1-6 0m12.238 26.413c-.413 1.73 1.47 3.098 2.988 2.17l.732-.446a2 2 0 0 1 2.084 0l.732.447c1.518.927 3.401-.44 2.988-2.171l-.199-.834a2 2 0 0 1 .645-1.983l.65-.558c1.352-1.157.633-3.37-1.14-3.512l-.855-.069a2 2 0 0 1-1.687-1.226l-.33-.791c-.682-1.643-3.01-1.643-3.693 0l-.329.791a2 2 0 0 1-1.687 1.226l-.854.069c-1.774.142-2.493 2.355-1.142 3.512l.652.558a2 2 0 0 1 .644 1.983z"
               fill="var(--color-blue-gray)"
             />
@@ -113,12 +101,12 @@ const FeatherIcon = ({
             <path
               d="M38.306 18.306a14.307 14.307 0 1 1-28.614 0 14.307 14.307 0 0 1 28.614 0Z"
               stroke="var(--color-blue-gray)"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <path
               d="M11.8 25.78 5.34 36.968l7.432-1.97 2.01 7.42 5.888-10.196M36.2 25.78l6.46 11.188L35.228 35l-2.01 7.42-5.888-10.2m-3.426-21.346 2.534 4.342 4.34 1.086-2.894 3.256.724 5.066-4.704-2.17-4.704 2.168.724-5.066L17.03 16.3l4.34-1.086z"
               stroke="var(--color-blue-gray)"
-              stroke-width="3"
+              strokeWidth="3"
             />
           </svg>
         </div>
@@ -205,37 +193,36 @@ const FeatherIcon = ({
                 dur="1s"
                 values="0 50 50;360 50 50"
                 keyTimes="0;1"
-              ></animateTransform>
+              />
             </circle>
           </svg>
         </div>
       );
 
     default:
-      return (
-        <>
-          {typeof feather.icons[icon as feather.FeatherIconNames] !==
-          "undefined" ? (
-            <span
-              className={`inline-block ${parentClass}`}
-              style={parentStyles}
-              id={`id_${randomId}`}
-              dangerouslySetInnerHTML={{
-                __html: feather.icons[icon as feather.FeatherIconNames].toSvg({
-                  class: className,
-                  color: fIconColor || "white",
-                  width: iconWidth,
-                  height: iconHeight,
-                  stroke: iconStrokeColor,
-                  fill: iconFillColor,
-                  style: iconStyle,
-                  strokeWidth: iconStrokeWidth,
-                }),
-              }}
-            />
-          ) : null}
-        </>
-      );
+      {
+        const featherIcon = feather.icons[icon as feather.FeatherIconNames];
+        if (!featherIcon) return null;
+
+        return (
+          <span
+            className={`inline-block ${parentClass}`}
+            style={parentStyles}
+            dangerouslySetInnerHTML={{
+              __html: featherIcon.toSvg({
+                class: className,
+                color: fIconColor || "white",
+                width: iconWidth,
+                height: iconHeight,
+                stroke: iconStrokeColor,
+                fill: iconFillColor,
+                style: iconStyle,
+                strokeWidth: iconStrokeWidth,
+              }),
+            }}
+          />
+        );
+      }
   }
 };
 

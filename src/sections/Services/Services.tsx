@@ -1,35 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import ServiceCard from "./ServiceCard";
-import mediaImg from "../../assets/images/services/service-img-1.svg";
-import influencerImg from "../../assets/images/services/service-img-2.svg";
-import eventsImg from "../../assets/images/services/service-img-3.svg";
-
-type Service = {
-  title: string[];
-  description: string;
-  image: string;
-};
-
-const services: Service[] = [
-  {
-    title: ["Media", "Relations"],
-    description:
-      "Orange PR takes charge of all media relations on behalf of our clients, enabling them to concentrate on their brand's daily requirements.",
-    image: mediaImg,
-  },
-  {
-    title: ["Influencer", "Management"],
-    description:
-      "We connect brands with the right influencers to build authentic reach and engagement across every platform.",
-    image: influencerImg,
-  },
-  {
-    title: ["Events"],
-    description:
-      "From concept to execution, we plan and manage standout events that put your brand center stage.",
-    image: eventsImg,
-  },
-];
+import FadeIn from "../../components/common/FadeIn";
+import { servicesData as services } from "../../data/services";
 
 const Services = () => {
   const [active, setActive] = useState(0);
@@ -56,10 +28,10 @@ const Services = () => {
   }, [active]);
 
   return (
-    <section className="bg-white py-12 md:py-20">
-      <div className="flex flex-col laptop:flex-row max-w-[1536px] mx-auto px-6 xs-sm:px-8 md-lg:px-12 gap-10 laptop:gap-6">
+    <section id="services" className="bg-white py-12 md:py-20">
+      <FadeIn className="flex flex-col laptop:flex-row max-w-[1536px] mx-auto px-6 xs-sm:px-8 md-lg:px-12 gap-10 laptop:gap-6">
         {/* Left copy */}
-        <div className="laptop:w-1/3 shrink-0 flex flex-col justify-center">
+        <div className="laptop:w-1/3 shrink-0 flex flex-col gap-10 justify-end">
           <h2 className="text-4xl md:text-[64px] font-inter-600 uppercase leading-tight text-title-black">
             What We Do
             <br />
@@ -76,11 +48,14 @@ const Services = () => {
           </p>
 
           <div className="mt-8 flex items-end justify-between gap-4 w-full">
-            <button className="px-16 py-8 rounded-[5px] text-base bg-black text-white font-inter-600 tracking-wider hover:bg-primary transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-sm active:scale-95">
+            <a
+              href="#contact"
+              className="px-6 py-4 md:px-16 md:py-8 rounded-[5px] text-sm md:text-base bg-black text-white font-inter-600 tracking-wider hover:bg-primary transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-sm active:scale-95 whitespace-nowrap"
+            >
               READ MORE
-            </button>
+            </a>
 
-            <div className="flex items-center gap-1 text-sm font-inter-600 pb-2">
+            <div className="flex items-end gap-1 text-sm font-inter-600 pb-2">
               {services.map((_, i) => (
                 <span key={i} className="flex items-center gap-1">
                   <button
@@ -119,7 +94,7 @@ const Services = () => {
             />
           ))}
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 };

@@ -1,11 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FeatherIcon from "../common/FeatherIcon";
 import { useWindowSize } from "../../hooks/useWindowSize";
+
+const linkTargets: Record<string, string> = {
+  "HOME": "#home",
+  "PR SERVICES": "#services",
+  "ABOUT US": "#about",
+  "CONTACT": "#contact",
+};
 
 export default function Navbar() {
   const navLinks = ["HOME", "PR SERVICES", "ABOUT US", "CONTACT"];
   const [isOpen, setIsOpen] = useState(false);
   const { width } = useWindowSize();
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleScroll = () => {
+      setIsOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
@@ -19,7 +39,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <a
                 key={link}
-                href="#"
+                href={linkTargets[link] || "#"}
                 className="text-base font-inter-600 text-white hover:text-white/80 transition-colors uppercase tracking-wider"
               >
                 {link}
@@ -43,11 +63,11 @@ export default function Navbar() {
 
         {/* Mobile menu dropdown list */}
         {isOpen && (
-          <div className="min-[980px]:hidden absolute top-full left-4 right-4 xs:left-6 xs:right-6 mt-4 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-[12px] flex flex-col gap-4 shadow-2xl z-50 animate-fade-in">
+          <div className="min-[980px]:hidden absolute top-full left-4 right-4 xs:left-6 xs:right-6 mt-4 bg-[#ff6b00] p-6 rounded-xl flex flex-col gap-4 shadow-2xl z-50 animate-fade-in">
             {navLinks.map((link) => (
               <a
                 key={link}
-                href="#"
+                href={linkTargets[link] || "#"}
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-inter-600 text-white hover:text-white/80 transition-colors uppercase tracking-wider block py-2 border-b border-white/10 last:border-b-0"
               >

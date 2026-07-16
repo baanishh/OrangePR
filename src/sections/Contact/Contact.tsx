@@ -1,6 +1,7 @@
 import { useState } from "react";
 import contactImg from "../../assets/images/contact/contact-img-1.svg";
 import Input from "../../components/common/Input";
+import FadeIn from "../../components/common/FadeIn";
 
 type ContactFormState = {
   firstName: string;
@@ -39,8 +40,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full bg-[#EFEFEF] overflow-hidden">
-      <div className="relative w-full min-h-0 lg:min-h-[760px] flex flex-col lg:flex-row items-stretch">
+    <section id="contact" className="w-full bg-[#EFEFEF] overflow-hidden">
+      <FadeIn className="relative w-full min-h-0 lg:min-h-[760px] flex flex-col lg:flex-row items-stretch">
         {/* Left Image */}
         <div className="relative lg:absolute lg:inset-y-0 lg:left-0 h-[320px] md:h-[450px] lg:h-full w-full lg:w-[45%]">
           <img
@@ -51,7 +52,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Card */}
-        <div className="relative lg:absolute lg:right-[4%] lg:top-1/2 lg:-translate-y-1/2 w-auto lg:w-[58%] bg-white rounded-[20px] px-6 py-10 md:px-12 md:py-12 lg:px-16 lg:py-16 shadow-sm mx-4 my-8 lg:mx-0 lg:my-0 flex flex-col justify-center">
+        <div className="relative lg:absolute lg:right-[4%] lg:top-1/2 lg:-translate-y-1/2 w-auto lg:w-[58%] bg-white rounded-2xl px-6 py-10 md:px-12 md:py-12 lg:px-16 lg:py-16 shadow-sm mx-4 my-8 lg:mx-0 lg:my-0 flex flex-col justify-center">
           <h2 className="mb-8 text-[32px] md:text-[44px] lg:text-[64px] font-inter-600 uppercase tracking-wide text-title-black">
             GET IN TOUCH
           </h2>
@@ -105,7 +106,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 };

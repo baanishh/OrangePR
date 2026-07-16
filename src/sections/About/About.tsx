@@ -1,19 +1,8 @@
 import { useState } from "react";
 import FeatherIcon from "../../components/common/FeatherIcon";
+import FadeIn from "../../components/common/FadeIn";
 import promoteImg from "../../assets/images/about/about-1.svg";
-
-type Stat = {
-  icon: string;
-  label: string;
-  value: string;
-};
-
-const stats: Stat[] = [
-  { icon: "customer-icon", label: "Our Clients", value: "208" },
-  { icon: "calendar-icon", label: "Events", value: "355" },
-  { icon: "star-badge", label: "Years of Experience", value: "10" },
-  { icon: "trending-up", label: "Materials", value: "15049" },
-];
+import { statisticsData as stats } from "../../data/statistics";
 
 const About = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -24,8 +13,9 @@ const About = () => {
     "Our ability to create and execute dynamic, forward-thinking PR campaigns quickly, while maintaining quality, increasing visibility, and achieving the targeted objectives or aims, is the key to our success. By offering a full turn-key solution, companies partner with us because of our unique approach, which allows us to build a solid connection with you and your brand. Therefore plan, execute, and evaluate effective cross-media and cross-cultural campaigns.";
 
   return (
-    <section className="bg-white">
-      <div className="flex flex-col max-w-[1536px] mx-auto px-6 xs-sm:px-8 md-lg:px-12 pt-12 md:pt-20 pb-8 md:pb-16 gap-12 md:gap-16">
+    <section id="about" className="bg-white">
+      <FadeIn>
+        <div className="flex flex-col max-w-[1536px] mx-auto px-6 xs-sm:px-8 md-lg:px-12 pt-12 md:pt-20 pb-8 md:pb-16 gap-12 md:gap-16">
         {/* Heading */}
         <div className="relative flex flex-col md:flex-row justify-between items-start md:items-end w-full">
           <div className="laptop:w-1/3 z-10">
@@ -67,7 +57,7 @@ const About = () => {
 
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="self-start px-16 py-8 rounded-[5px] text-base bg-black text-white font-inter-600 tracking-wider hover:bg-primary transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-sm active:scale-95"
+              className="self-start px-6 py-4 md:px-16 md:py-8 rounded-[5px] text-sm md:text-base bg-black text-white font-inter-600 tracking-wider hover:bg-primary transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-sm active:scale-95 whitespace-nowrap"
             >
               <span>{isExpanded ? "READ LESS" : "READ MORE"}</span>
             </button>
@@ -102,6 +92,7 @@ const About = () => {
           </div>
         ))}
       </div>
+      </FadeIn>
     </section>
   );
 };
